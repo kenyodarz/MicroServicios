@@ -1,0 +1,40 @@
+# Configuraciones del servidor
+server:
+  port: 8090
+# Configuraciones de eureka
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+spring:
+  application:
+    name: servicio-gateway
+  cloud:
+    loadbalancer:
+      cache:
+        enabled: false
+    gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: 'http://localhost:4200'
+            allowedHeaders:
+              - Content-Type
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
+      routes:
+        - id: servicio-productos
+          uri: lb://servicio-productos
+          predicates:
+            - Path=/api/productos/**
+          filters:
+            - StripPrefix=2
+        - id: servicio-items
+          uri: lb://servicio-items
+          predicates:
+            - Path=/api/items/**
+          filters:
+            - StripPrefix=2
