@@ -4,7 +4,7 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/MS2021
     username: postgres
-    password: cdm
+    password: barcelona
     driver-class-name: org.postgresql.Driver
 
   jpa:
@@ -22,6 +22,7 @@ server:
 
 eureka:
   instance:
+    hostname: localhost
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
   client:
     service-url:
