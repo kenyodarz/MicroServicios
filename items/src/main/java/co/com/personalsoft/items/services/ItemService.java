@@ -1,7 +1,7 @@
 package co.com.personalsoft.items.services;
 
 import co.com.personalsoft.items.models.Item;
-import co.com.personalsoft.items.models.Producto;
+import com.bykenyodarz.commons.models.Producto;
 
 import java.util.List;
 

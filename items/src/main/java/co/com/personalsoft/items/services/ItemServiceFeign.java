@@ -2,7 +2,7 @@ package co.com.personalsoft.items.services;
 
 import co.com.personalsoft.items.clients.ProductoClientRest;
 import co.com.personalsoft.items.models.Item;
-import co.com.personalsoft.items.models.Producto;
+import com.bykenyodarz.commons.models.Producto;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

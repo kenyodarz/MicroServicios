@@ -1,9 +1,9 @@
 package co.com.personalsoft.productos.services.providers;
 
-import co.com.personalsoft.productos.models.Producto;
 import co.com.personalsoft.productos.repositories.ProductoRepository;
 import co.com.personalsoft.productos.services.apis.ProductoServiceAPI;
 import co.com.personalsoft.productos.shared.GenericServiceImpl;
+import com.bykenyodarz.commons.models.Producto;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
 

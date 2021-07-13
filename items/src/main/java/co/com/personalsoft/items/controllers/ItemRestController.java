@@ -1,8 +1,8 @@
 package co.com.personalsoft.items.controllers;
 
 import co.com.personalsoft.items.models.Item;
-import co.com.personalsoft.items.models.Producto;
 import co.com.personalsoft.items.services.ItemService;
+import com.bykenyodarz.commons.models.Producto;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
@@ -47,7 +47,7 @@ public class ItemRestController {
         return itemService.findById(id, cantidad);
     }
 
-    public Item metodoAlternativo(Long id, Integer cantidad, Exception ex){
+    public Item metodoAlternativo(Long id, Integer cantidad, Exception ex) {
         var item = new Item();
         var product = new Producto();
 

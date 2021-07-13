@@ -1,4 +1,4 @@
-package co.com.personalsoft.productos.models;
+package com.bykenyodarz.commons.models;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
