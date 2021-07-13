@@ -2,6 +2,7 @@ package co.com.personalsoft.items.services;
 
 import co.com.personalsoft.items.clients.ProductoClientRest;
 import co.com.personalsoft.items.models.Item;
+import co.com.personalsoft.items.models.Producto;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -26,5 +27,15 @@ public class ItemServiceFeign implements ItemService {
     @Override
     public Item findById(Long id, Integer cantidad) {
         return new Item(clientRest.getOne(id), cantidad);
+    }
+
+    @Override
+    public Producto save(Producto producto) {
+        return clientRest.create(producto);
+    }
+
+    @Override
+    public void delete(Long id) {
+        clientRest.eliminar(id);
     }
 }

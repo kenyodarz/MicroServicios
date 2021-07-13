@@ -8,6 +8,11 @@ spring:
 server:
   port: ${PORT:0}
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
 eureka:
   instance:
     hostname: localhost
@@ -126,3 +131,4 @@ logging:
 #      baseConfig: default
 #    backendB:
 #      baseConfig: default
+
